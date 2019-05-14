@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Executive Contacts</title>
+    <link rel="stylesheet" type="text/css" href="tools/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="exec_contacts.css">
+</head>
+<body>
+    
+    <!-- Modal for displaying a single contact on mobile -->
+    <div class="modal fade d-md-none" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactName" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title" id="contactName">Tom Elleyz</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-weight: bolder; font-size: 2rem;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-borderless">
+                            <tr>
+                                <th scope="col">Email</th>
+                                <td>tomelleyz</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Phone</th>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Company/Organisation</th>
+                                <td>African Development Bank</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Country</th>
+                                <td>Nigeria</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card for displaying a single contact on desktop -->
+    <div class="card shadow-lg px-2 py-4 d-none d-sm-none d-md-block" id="contactCard">
+        <div class="card-body">
+            <h4 class="card-title">Tom Elleyz <span class="float-right font-weight-bold closeContactCard" style="cursor: pointer; font-size: 2rem; margin-top: -25px;">&times;</span></h4>
+            <div class="table-responsive">
+                <table class="table table-striped table-borderless">
+                    <tr>
+                        <th scope="col">Email</th>
+                        <td>tomelleyz</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Phone</th>
+                        <td>1234</td>
+                    </tr>
+                    <tr>
+                        <th>Company/Organisation</th>
+                        <td>African Development bank</td>
+                    </tr>
+                    <tr>
+                        <th>Country</th>
+                        <td>Nigeria</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Overlay-->
+    <div class="d-md-none" id="bodyoverlay"></div>
+
+    <!-- Mobile Nav -->
+    <div class="d-md-none shadow-lg bg-white" id="mobilenav">
+        <div class="container-fluid pt-4 px-md-0 px-lg-1">
+            <h4><i class="material-icons mr-1">contacts</i>Contacts</h4>
+            <div class="list-group list-group-flush mt-4">
+                <a href="#!" class="list-group-item list-group-item-action"><i class="material-icons mr-1" style="font-size: 16px;">visibility</i>View Contacts</a>
+                <a href="#!" class="list-group-item list-group-item-action"><i class="material-icons mr-1" style="font-size: 16px;">add</i>Add Contacts</a>
+                <a href="#!" class="list-group-item list-group-item-action"><i class="material-icons mr-1" style="font-size: 16px;">edit</i>Edit Contacts</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid fixed-top">
+        <div class="row topbar px-3 py-4 mb-0">
+            <div class="col-12 col-sm-12 col-md-5 mb-1 mb-sm-1 mb-md-0 text-center">
+                <h3>Executive Contacts</h3>
+            </div>
+            <div class="col-2 col-sm-2 d-md-none mt-3 mt-sm-3 mt-md-0 h3"><i class="material-icons align-text-bottom" id="menu">menu</i></div>
+            <div class="col-10 col-sm-10 col-md-7 mt-3 mt-sm-3 mt-md-0 text-right">
+                <span class="h6 mx-1">Ola Eleyinmi</span>
+                <img src="SVG4.jpg" alt="Profile picture" class="rounded-circle mx-1" width="45" height="45">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidenav and Main content -->
+    <div class="container-fluid nav-and-main-content" style="margin-top: 92px;">
+        <div class="row mb-0">
+            <!-- Sidenav -->
+            <div class="col col-md-3 d-none d-sm-none d-md-block shadow bg-white position-fixed px-0" style="min-height: 100%;">
+                <div>
+                    <h4 class="pl-4 py-4 mb-0" style="background-color: #f5f5f5;"><i class="material-icons align-text-middle mr-2">contacts</i>Contacts</h4>
+                    <div class="list-group list-group-flush">
+                        <a href="#!" class="list-group-item list-group-item-action text-body"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">visibility</i>View Contacts</a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">add</i>Add Contacts</a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">edit</i>Edit Contacts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content area -->
+            <div class="col-12 col-sm-12 col-md-9 offset-md-3">
+                <div class="row py-3">
+                    <div class="col-12 col-sm-12 col-md-6" style="color: #e60000;">
+                        <h2>View Contacts</h2>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#!" class="font-weight-bold" style="color: #e60000;">Contacts</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" style="color: #212529;">View Contacts</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="bg-white container-fluid py-4 shadow-sm mb-4">
+                    <div class="row mb-4">
+                        <!-- Number of contacts selected -->
+                        <div class="col-12 col-sm-12 col-md-6 mb-4 mb-sm-4 mb-md-0">
+                            <select name="contactsDisplayed" id="noOfContactsDisplayed" class="custom-select w-auto" style="cursor: pointer;">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                            </select>
+                            <small>Contacts per page</small>
+                        </div>
+                        <!-- Search -->
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Search for contacts..." aria-label="Recipient's name">
+                                <div class="input-group-append">
+                                    <button class="text-white buttons btn" type="button">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The contacts table itself -->
+                    <div class="table-responsive mainTable" style="transition: width 1s ease-in-out;">
+                    <table class="table table-hover">
+                        <thead class="text-body" style="background-color: #f5f5f5;">
+                            <tr class="mainTableHead">
+                                <th scope="col">#</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Company/Organisation</th>
+                                <th scope="col">Country</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>Tom</td>
+                                <td>Elleyz</td>
+                                <td>tomelleyz</td>
+                                <td>1234</td>
+                                <td>African Development Bank</td>
+                                <td>Nigeria</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination">
+                            <li class="page-item"><a href="#!" class="page-link text-white buttons btn mr-2">Previous</a></li>
+                            <li class="page-item"><a href="#!" class="page-link text-white buttons btn">Next</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="tools/jquery-3.3.1.min.js"></script>
+    <script src="tools/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Funtion that opens mobile sidenav
+            $("#menu").click(function() {
+                $("#bodyoverlay").fadeIn();
+                $("#mobilenav").css("left", "0");
+            });
+
+            // Function that closes mobile sidenav
+            $("#bodyoverlay").click(function() {
+                $("#mobilenav").css("left", "-270px");
+                $(this).fadeOut();
+            });
+
+            var tableRows = $("div.mainTable").find("tr"); // Selects all <tr> elements in the .mainTable
+            var contactRows = tableRows.not("tr.mainTableHead"); // Excludes the <tr> that contains the table headings
+
+            // Function that opens contact card for medium screen size and above
+            contactRows.click(function() {
+                $(".mainTable").css("width", "48%");
+                $("#contactCard").css({"right": "30px", "opacity": "1"});
+                $("body").css("padding-right", "0");
+            });
+
+            // Function that closes contact card for medium screen size and above
+            $("span.closeContactCard").click(function() {
+                $("#contactCard").css({"right": "-500px", "opacity": "0"});
+                $(".mainTable").css("width", "100%");
+            });
+
+            // Setting up the contact modal on mobile
+            contactRows.attr({"data-toggle": "modal", "data-target": "#contactModal"});
+
+        });
+    </script>
+</body>
+</html>

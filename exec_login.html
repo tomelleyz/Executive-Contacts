@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN | Executives</title>
+    <link rel="stylesheet" type="text/css" href="tools/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="exec_login.css">
+</head>
+<body>
+    
+    <div class="row" style="margin: 0;">
+        <div class="col s12 l5 text-div valign-wrapper">
+            <div class="container center-align white-text">
+                <h3>Welcome to the <br/>Executive Contacts</h3>
+            </div>
+        </div>
+        <div class="col s12 l7 valign-wrapper form-div">
+            <div class="container">
+            <form action="" class="z-depth-2">
+                <h4>Login</h4>
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" id="email">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <input type="password" id="passwordField">
+                    <label for="email">Password</label>
+                    <i title="Show password" class="material-icons" id="showpasswordIcon">visibility</i>
+                    <i title="Hide password" class="material-icons" id="hidepasswordIcon">visibility_off</i>
+                </div>
+                <div class="row" style="margin: 0;">
+                <button class="col s12 m4 btn-flat btn-large" type="submit">Log in</button>
+                <a href="#!" class="col s12 m4 offset-m4">Forgot password?</a>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="tools/jquery-3.3.1.min.js"></script>
+    <script src="tools/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#showpasswordIcon').click(function() {
+                $('#passwordField').attr("type", "text");
+                $(this).hide();
+                $('#hidepasswordIcon').show();
+            });
+            $('#hidepasswordIcon').click(function() {
+                $('#passwordField').attr("type", "password");
+                $(this).hide();
+                $('#showpasswordIcon').show();
+            });
+        });
+    </script>
+</body>
+</html>
