@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Executive Contacts</title>
     <link rel="stylesheet" type="text/css" href="tools/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="exec_contacts.css">
+    <link rel="stylesheet" href="tools/google_icons/material-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/exec_contacts.css">
 </head>
 <body>
     
@@ -16,7 +17,7 @@
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <img src="SVG4.jpg" alt="Contact's picture" class="rounded-circle mr-2" width="45" height="45">
-                    <h4 class="modal-title" id="contactName">Tom Elleyz</h4>
+                    <h4 class="modal-title" id="modalContactName">Tom Elleyz</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" style="font-weight: bolder; font-size: 2rem; color: #e60000;">&times;</span>
                     </button>
@@ -26,28 +27,32 @@
                         <table class="table table-borderless">
                             <tr>
                                 <th scope="col">Email</th>
-                                <td>tomelleyz</td>
+                                <td id="modalContactEmail">tomelleyz</td>
                             </tr>
                             <tr>
                                 <th scope="col">Phone</th>
-                                <td>1234</td>
+                                <td id="modalContactPhone">1234</td>
                             </tr>
                             <tr>
                                 <th scope="col">Company/Organisation</th>
-                                <td>African Development Bank</td>
+                                <td id="modalContactCompany">African Development Bank</td>
                             </tr>
                             <tr>
                                 <th scope="col">Country</th>
-                                <td>Nigeria</td>
+                                <td id="modalContactCountry">Nigeria</td>
                             </tr>
                         </table>
                     </div>
+                </div>
+                <div class="p-4 text-center border-top">
+                    <button class="btn mx-2 cardbtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom">edit</i>Edit</button>
+                    <button class="btn mx-2 cardbtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom">delete</i>Delete</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Card for displaying a single contact on desktop -->
+    <!-- Card for displaying a single contact on tablet and PC -->
     <div class="card shadow-lg d-none d-sm-none d-md-block" id="contactCard">
         <div class="card-body p-0">
             <div class="card-title p-4 mb-0">
@@ -55,7 +60,7 @@
                 <h4 class="d-inline-block mb-0">Tom Elleyz</h4>
                 <span class="float-right font-weight-bold closeContactCard" style="cursor: pointer; font-size: 2rem; margin-top: -10px;">&times;</span>
             </div>
-            <div class="table-responsive table-borderless p-4">
+            <div class="table-responsive table-borderless px-4 py-2">
                 <table class="table">
                     <tr>
                         <th scope="col">Email</th>
@@ -75,6 +80,10 @@
                     </tr>
                 </table>
             </div>
+            <div class="p-4 text-center border-top">
+                <button class="btn mx-2 cardbtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom">edit</i>Edit</button>
+                <button class="btn mx-2 cardbtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom">delete</i>Delete</button>
+            </div>
         </div>
     </div>
 
@@ -86,7 +95,7 @@
         <div class="px-0">
             <h4 class="pl-4 py-4 mb-0" style="background-color: #f5f5f5;"><i class="material-icons align-text-middle mr-2">contacts</i>Contacts</h4>
             <div class="list-group list-group-flush">
-                <a href="#!" class="list-group-item list-group-item-action"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">visibility</i>View Contacts</a>
+                <a href="#!" class="list-group-item list-group-item-action current-page-nav"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">visibility</i>View Contacts</a>
                 <a href="#!" class="list-group-item list-group-item-action"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">add</i>Add Contacts</a>
                 <a href="#!" class="list-group-item list-group-item-action"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">edit</i>Edit Contacts</a>
             </div>
@@ -111,21 +120,25 @@
     <div class="container-fluid nav-and-main-content" style="margin-top: 92px;">
         <div class="row mb-0">
             <!-- Sidenav -->
-            <div class="col col-md-3 d-none d-sm-none d-md-block shadow bg-white position-fixed px-0" style="min-height: 100%;">
+            <div class="col col-md-3 d-none d-sm-none d-md-block shadow bg-white position-fixed px-0" id="sidenavPC" style="min-height: 100%; transition: all .3s ease-in-out;">
                 <div>
-                    <h4 class="pl-4 py-4 mb-0" style="background-color: #f5f5f5;"><i class="material-icons align-text-middle mr-2">contacts</i>Contacts</h4>
+                    <h4 class="pl-3 py-4 mb-0" style="background-color: #f5f5f5;">
+                        <i class="material-icons align-text-middle mr-1">contacts</i> <span class="toggleVisibility">Contacts</span> 
+                        <i class="material-icons float-right px-1" id="contractBtn" style="color: #e60000; cursor: pointer;" title="Contract sidebar">chevron_left</i>
+                        <i class="material-icons float-right px-1" id="expandBtn" style="color: #e60000; cursor: pointer;" title="Expand sidebar">chevron_right</i>
+                    </h4>
                     <div class="list-group list-group-flush">
-                        <a href="#!" class="list-group-item list-group-item-action text-body"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">visibility</i>View Contacts</a>
-                        <a href="#!" class="list-group-item list-group-item-action text-body"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">add</i>Add Contacts</a>
-                        <a href="#!" class="list-group-item list-group-item-action text-body"><i class="material-icons pl-3 mr-2 align-text-bottom" style="font-size: 20px;">edit</i>Edit Contacts</a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0 current-page-nav"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">visibility</i><span class="toggleVisibility">View Contacts</span></a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">add</i><span class="toggleVisibility">Add Contacts</span></a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">edit</i><span class="toggleVisibility">Edit Contacts</span></a>
                     </div>
                 </div>
             </div>
 
             <!-- Main content area -->
-            <div class="col-12 col-sm-12 col-md-9 offset-md-3">
+            <div class="col-12 col-sm-12 col-md-9 offset-md-3" id="mainContentArea" style="transition: all .3s ease-in-out;">
                 <div class="row py-3">
-                    <div class="col-12 col-sm-12 col-md-6" style="color: #e60000;">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <h2>View Contacts</h2>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6">
@@ -284,41 +297,6 @@
 
     <script src="tools/jquery-3.3.1.min.js"></script>
     <script src="tools/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-
-            // Funtion that opens mobile sidenav
-            $("#menu").click(function() {
-                $("#bodyoverlay").fadeIn();
-                $("#mobilenav").css("left", "0");
-            });
-
-            // Function that closes mobile sidenav
-            $("#bodyoverlay").click(function() {
-                $("#mobilenav").css("left", "-270px");
-                $(this).fadeOut();
-            });
-
-            var tableRows = $("div.mainTable").find("tr"); // Selects all <tr> elements in the .mainTable
-            var contactRows = tableRows.not("tr.mainTableHead"); // Excludes the <tr> that contains the table headings
-
-            // Function that opens contact card for medium screen size and above
-            contactRows.click(function() {
-                $(".mainTable").css("width", "48%");
-                $("#contactCard").css({"right": "30px", "opacity": "1"});
-                $("body").css("padding-right", "0");
-            });
-
-            // Function that closes contact card for medium screen size and above
-            $("span.closeContactCard").click(function() {
-                $("#contactCard").css({"right": "-500px", "opacity": "0"});
-                $(".mainTable").css("width", "100%");
-            });
-
-            // Setting up the contact modal on mobile
-            contactRows.attr({"data-toggle": "modal", "data-target": "#contactModal"});
-
-        });
-    </script>
+    <script src="js/exec_contacts.js"></script>
 </body>
 </html>

@@ -1,62 +1,63 @@
 {
-    "Tom Elleyz": {
-        "Email": "tomelleyz@example.com",
-        "Phone": "1234",
-        "Company/Organisation": "African Development Bank",
-        "Country": "Nigeria"
+    "TomElleyz": {
+        "name": "Tomiwa",
+        "email": "tomelleyz@example.com",
+        "phone": "1234",
+        "company": "African Development Bank",
+        "country": "Nigeria"
     },
     "John Doe": {
-        "Email": "johndoe@example.com",
-        "Phone": "5678",
-        "Company/Organisation": "Bank of South Africa",
-        "Country": "South Africa"
+        "email": "johndoe@example.com",
+        "phone": "5678",
+        "company": "Bank of South Africa",
+        "country": "South Africa"
     },
     "Adams Smith": {
-        "Email": "tomelleyz@example.com",
-        "Phone": "1234",
-        "Company/Organisation": "African Development Bank",
-        "Country": "Nigeria"
+        "email": "tomelleyz@example.com",
+        "phone": "1234",
+        "company": "African Development Bank",
+        "country": "Nigeria"
     },
     "Alex Marshall": {
-        "Email": "johndoe@example.com",
-        "Phone": "5678",
-        "Company/Organisation": "Bank of South Africa",
-        "Country": "South Africa"
+        "email": "johndoe@example.com",
+        "phone": "5678",
+        "company": "Bank of South Africa",
+        "country": "South Africa"
     },
     "Ola Eleyinmi": {
-        "Email": "tomelleyz@example.com",
-        "Phone": "1234",
-        "Company/Organisation": "African Development Bank",
-        "Country": "Nigeria"
+        "email": "tomelleyz@example.com",
+        "phone": "1234",
+        "company": "African Development Bank",
+        "country": "Nigeria"
     },
     "Ade Tomiwa ": {
-        "Email": "johndoe@example.com",
-        "Phone": "5678",
-        "Company/Organisation": "Bank of South Africa",
-        "Country": "South Africa"
+        "email": "johndoe@example.com",
+        "phone": "5678",
+        "company": "Bank of South Africa",
+        "country": "South Africa"
     },
     "Ola Sunkanmi": {
-        "Email": "tomelleyz@example.com",
-        "Phone": "1234",
-        "Company/Organisation": "African Development Bank",
-        "Country": "Nigeria"
+        "email": "tomelleyz@example.com",
+        "phone": "1234",
+        "company": "African Development Bank",
+        "country": "Nigeria"
     },
     "David Jones": {
-        "Email": "johndoe@example.com",
-        "Phone": "5678",
-        "Company/Organisation": "Bank of South Africa",
-        "Country": "South Africa"
+        "email": "johndoe@example.com",
+        "phone": "5678",
+        "company": "Bank of South Africa",
+        "country": "South Africa"
     },
     "Shawn Peters": {
-        "Email": "tomelleyz@example.com",
-        "Phone": "1234",
-        "Company/Organisation": "African Development Bank",
-        "Country": "Nigeria"
+        "email": "tomelleyz@example.com",
+        "phone": "1234",
+        "company": "African Development Bank",
+        "country": "Nigeria"
     },
     "Jane Whitefield": {
-        "Email": "johndoe@example.com",
-        "Phone": "5678",
-        "Company/Organisation": "Bank of South Africa",
-        "Country": "South Africa"
+        "email": "johndoe@example.com",
+        "phone": "5678",
+        "company": "Bank of South Africa",
+        "country": "South Africa"
     }
 }
