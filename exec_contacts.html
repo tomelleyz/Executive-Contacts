@@ -17,7 +17,7 @@
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <img src="SVG4.jpg" alt="Contact's picture" class="rounded-circle mr-2" width="45" height="45">
-                    <h4 class="modal-title" id="modalContactName">Tom Elleyz</h4>
+                    <h4 class="modal-title contactName" id="contactName">Tom Elleyz</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" style="font-weight: bolder; font-size: 2rem; color: #e60000;">&times;</span>
                     </button>
@@ -27,19 +27,19 @@
                         <table class="table table-borderless">
                             <tr>
                                 <th scope="col">Email</th>
-                                <td id="modalContactEmail">tomelleyz</td>
+                                <td class="contactEmail">tomelleyz</td>
                             </tr>
                             <tr>
                                 <th scope="col">Phone</th>
-                                <td id="modalContactPhone">1234</td>
+                                <td class="contactPhone">1234</td>
                             </tr>
                             <tr>
                                 <th scope="col">Company/Organisation</th>
-                                <td id="modalContactCompany">African Development Bank</td>
+                                <td class="contactCompany">African Development Bank</td>
                             </tr>
                             <tr>
                                 <th scope="col">Country</th>
-                                <td id="modalContactCountry">Nigeria</td>
+                                <td class="contactCountry">Nigeria</td>
                             </tr>
                         </table>
                     </div>
@@ -57,26 +57,26 @@
         <div class="card-body p-0">
             <div class="card-title p-4 mb-0">
                 <img src="SVG4.jpg" alt="Contact's picture" class="rounded-circle mr-2 d-inline-block align-text-middle" width="45" height="45">
-                <h4 class="d-inline-block mb-0">Tom Elleyz</h4>
+                <h4 class="d-inline-block mb-0 contactName">Tom Elleyz</h4>
                 <span class="float-right font-weight-bold closeContactCard" style="cursor: pointer; font-size: 2rem; margin-top: -10px;">&times;</span>
             </div>
             <div class="table-responsive table-borderless px-4 py-2">
                 <table class="table">
                     <tr>
                         <th scope="col">Email</th>
-                        <td>tomelleyz</td>
+                        <td class="contactEmail">tomelleyz</td>
                     </tr>
                     <tr>
                         <th scope="col">Phone</th>
-                        <td>1234</td>
+                        <td class="contactPhone">1234</td>
                     </tr>
                     <tr>
                         <th>Company/Organisation</th>
-                        <td>African Development bank</td>
+                        <td class="contactCompany">African Development bank</td>
                     </tr>
                     <tr>
                         <th>Country</th>
-                        <td>Nigeria</td>
+                        <td class="contactCountry">Nigeria</td>
                     </tr>
                 </table>
             </div>
@@ -120,23 +120,23 @@
     <div class="container-fluid nav-and-main-content" style="margin-top: 92px;">
         <div class="row mb-0">
             <!-- Sidenav -->
-            <div class="col col-md-3 d-none d-sm-none d-md-block shadow bg-white position-fixed px-0" id="sidenavPC" style="min-height: 100%; transition: all .3s ease-in-out;">
+            <div class="col col-md-3 d-none d-sm-none d-md-block shadow bg-white position-fixed px-0" id="sidenavPC" style="min-height: 100%; transition: all .5s ease-in-out;">
                 <div>
                     <h4 class="pl-3 py-4 mb-0" style="background-color: #f5f5f5;">
-                        <i class="material-icons align-text-middle mr-1">contacts</i> <span class="toggleVisibility">Contacts</span> 
+                        <i class="material-icons align-text-middle mr-1">contacts</i> <span class="sidenavText">Contacts</span> 
                         <i class="material-icons float-right px-1" id="contractBtn" style="color: #e60000; cursor: pointer;" title="Contract sidebar">chevron_left</i>
                         <i class="material-icons float-right px-1" id="expandBtn" style="color: #e60000; cursor: pointer;" title="Expand sidebar">chevron_right</i>
                     </h4>
                     <div class="list-group list-group-flush">
-                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0 current-page-nav"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">visibility</i><span class="toggleVisibility">View Contacts</span></a>
-                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">add</i><span class="toggleVisibility">Add Contacts</span></a>
-                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">edit</i><span class="toggleVisibility">Edit Contacts</span></a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0 current-page-nav"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">visibility</i><span class="sidenavText">View Contacts</span></a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">add</i><span class="sidenavText">Add Contacts</span></a>
+                        <a href="#!" class="list-group-item list-group-item-action text-body pr-0"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">edit</i><span class="sidenavText">Edit Contacts</span></a>
                     </div>
                 </div>
             </div>
 
             <!-- Main content area -->
-            <div class="col-12 col-sm-12 col-md-9 offset-md-3" id="mainContentArea" style="transition: all .3s ease-in-out;">
+            <div class="col-12 col-sm-12 col-md-9 offset-md-3" id="mainContentArea" style="transition: all .5s ease-in-out;">
                 <div class="row py-3">
                     <div class="col-12 col-sm-12 col-md-6">
                         <h2>View Contacts</h2>
@@ -189,95 +189,95 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr data-rowindex="0">
                                 <th scope="row">1</th>
                                 <td>Tom</td>
                                 <td>Elleyz</td>
-                                <td>tomelleyz</td>
+                                <td>tomelleyz@example.com</td>
                                 <td>1234</td>
                                 <td>African Development Bank</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="1">
                                 <th scope="row">2</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
-                                <td>1234</td>
-                                <td>African Development Bank</td>
-                                <td>Nigeria</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>johndoe@example.com</td>
+                                <td>5678</td>
+                                <td>Bank of South Africa</td>
+                                <td>South Africa</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="2">
                                 <th scope="row">3</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
+                                <td>Adam</td>
+                                <td>Smith</td>
+                                <td>adamsmith@example.com</td>
                                 <td>1234</td>
                                 <td>African Development Bank</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="3">
                                 <th scope="row">4</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
-                                <td>1234</td>
-                                <td>African Development Bank</td>
-                                <td>Nigeria</td>
+                                <td>Alex</td>
+                                <td>Marshall</td>
+                                <td>alexmarshall@example.com</td>
+                                <td>5678</td>
+                                <td>Bank of South Africa</td>
+                                <td>South Africa</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="4">
                                 <th scope="row">5</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
+                                <td>Ola</td>
+                                <td>Elley</td>
+                                <td>ola@example.com</td>
                                 <td>1234</td>
                                 <td>African Development Bank</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="5">
                                 <th scope="row">6</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
-                                <td>1234</td>
-                                <td>African Development Bank</td>
-                                <td>Nigeria</td>
+                                <td>Ade</td>
+                                <td>Tomiwa</td>
+                                <td>adetomiwa@example.com</td>
+                                <td>5678</td>
+                                <td>Bank of South Africa</td>
+                                <td>South Africa</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="6">
                                 <th scope="row">7</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
+                                <td>Ola</td>
+                                <td>Sunkanmi</td>
+                                <td>olasunkanmi@example.com</td>
                                 <td>1234</td>
                                 <td>African Development Bank</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="7">
                                 <th scope="row">8</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
-                                <td>1234</td>
-                                <td>African Development Bank</td>
-                                <td>Nigeria</td>
+                                <td>David</td>
+                                <td>Jones</td>
+                                <td>davidjones@example.com</td>
+                                <td>5678</td>
+                                <td>Bank of South Africa</td>
+                                <td>South Africa</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="8">
                                 <th scope="row">9</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
+                                <td>Shawn</td>
+                                <td>Peters</td>
+                                <td>shawnpeters@example.com</td>
                                 <td>1234</td>
                                 <td>African Development Bank</td>
                                 <td>Nigeria</td>
                             </tr>
-                            <tr>
+                            <tr data-rowindex="9">
                                 <th scope="row">10</th>
-                                <td>Tom</td>
-                                <td>Elleyz</td>
-                                <td>tomelleyz</td>
-                                <td>1234</td>
-                                <td>African Development Bank</td>
-                                <td>Nigeria</td>
+                                <td>Jane</td>
+                                <td>Whitefield</td>
+                                <td>janewhitefield@example.com</td>
+                                <td>5678</td>
+                                <td>Bank of South Africa</td>
+                                <td>South Africa</td>
                             </tr>
                         </tbody>
                     </table>

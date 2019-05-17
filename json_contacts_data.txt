@@ -1,0 +1,74 @@
+{
+    "contacts": [
+        {
+            "name": "Tom Elleyz",
+            "email": "tomelleyz@example.com",
+            "phone": "1234",
+            "company": "African Development Bank",
+            "country": "Nigeria"
+        },
+        {
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "phone": "5678",
+            "company": "Bank of South Africa",
+            "country": "South Africa"
+        },
+        {
+            "name": "Adams Smith",
+            "email": "adamsmith@example.com",
+            "phone": "1234",
+            "company": "African Development Bank",
+            "country": "Nigeria"
+        },
+        {
+            "name": "Alex Marshall",
+            "email": "alexmarshall@example.com",
+            "phone": "5678",
+            "company": "Bank of South Africa",
+            "country": "South Africa"
+        },
+        {
+            "name": "Ola Elley",
+            "email": "ola@example.com",
+            "phone": "1234",
+            "company": "African Development Bank",
+            "country": "Nigeria"
+        },
+        {
+            "name": "Ade Tomiwa",
+            "email": "adetomiwa@example.com",
+            "phone": "5678",
+            "company": "Bank of South Africa",
+            "country": "South Africa"
+        },
+        {
+            "name": "Ola Sunkanmi",
+            "email": "olasunkanmi@example.com",
+            "phone": "1234",
+            "company": "African Development Bank",
+            "country": "Nigeria"
+        },
+        {
+            "name": "David Jones",
+            "email": "davidjones@example.com",
+            "phone": "5678",
+            "company": "Bank of South Africa",
+            "country": "South Africa"
+        },
+        {
+            "name": "Shawn Peters",
+            "email": "shawnpeters@example.com",
+            "phone": "1234",
+            "company": "African Development Bank",
+            "country": "Nigeria"
+        },
+        {
+            "name": "Jane Whitefield",
+            "email": "janewhitefield@example.com",
+            "phone": "5678",
+            "company": "Bank of South Africa",
+            "country": "South Africa"
+        }
+    ]
+}
