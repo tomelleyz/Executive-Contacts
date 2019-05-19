@@ -2,12 +2,12 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(tools/google_icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: url(/Executive-Contacts/tools/google_icons/MaterialIcons-Regular.eot); /* For IE6-8 */
     src: local('Material Icons'),
       local('MaterialIcons-Regular'),
-      url(tools/google_icons/MaterialIcons-Regular.woff2) format('woff2'),
-      url(tools/google_icons/MaterialIcons-Regular.woff) format('woff'),
-      url(tools/google_icons/MaterialIcons-Regular.ttf) format('truetype');
+      url(/Executive-Contacts/tools/google_icons/MaterialIcons-Regular.woff2) format('woff2'),
+      url(/Executive-Contacts/tools/google_icons/MaterialIcons-Regular.woff) format('woff'),
+      url(/Executive-Contacts/tools/google_icons/MaterialIcons-Regular.ttf) format('truetype');
   }
    .material-icons {
     font-family: 'Material Icons';
@@ -39,7 +39,6 @@
 body {
   background-color: #f5f5f5;
   color: #000000;
-  padding-right: 0 !important;
 }
 .topbar {
   background-color: #e60000; /* Fallback */
@@ -51,7 +50,7 @@ body {
 }
 .breadcrumb-item + .breadcrumb-item::before {
   color: #212529;
-  content: "> ";
+  content: "> "!important;
   padding: 0 5px;
 }
 .nav-and-main-content tbody tr {
@@ -140,7 +139,7 @@ button.cardbtn:focus {
   background: linear-gradient(to right, rgba(230,0,0,0.2), rgba(255,0,0,0.2)) !important;
   
 }
-#expandBtn {
+#expandBtn, .editContactForm {
   display: none; /* Initially hidden */
 }
 

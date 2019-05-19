@@ -14,8 +14,8 @@
     <!-- Modal for displaying a single contact on mobile -->
     <div class="modal fade d-md-none" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactName" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
+            <div class="modal-content modal-card-contact-details">
+                <div class="modal-header">
                     <img src="SVG4.jpg" alt="Contact's picture" class="rounded-circle mr-2" width="45" height="45">
                     <h4 class="modal-title contactName" id="contactName">Tom Elleyz</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -45,8 +45,53 @@
                     </div>
                 </div>
                 <div class="p-4 text-center border-top">
-                    <button class="btn mx-2 cardbtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom">edit</i>Edit</button>
-                    <button class="btn mx-2 cardbtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom">delete</i>Delete</button>
+                    <button class="btn mx-2 cardbtn editBtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom">edit</i>Edit</button>
+                    <button class="btn mx-2 cardbtn deleteBtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom">delete</i>Delete</button>
+                </div>
+            </div>
+
+            <!-- Edit Contact form (initially hidden) -->
+            <div class="card-body modal-content editContactForm p-0 ">
+                <div class="card-title modal-header p-4 mb-0">
+                    <h4 class="d-inline-block mb-0 editTitle">Edit</h4>
+                </div>
+                <div class="px-4 py-2">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-sm-6 mb-3">
+                                <label for="firstName">First name</label>
+                                <input type="text" class="form-control editFirstNameField" name="firstName" placeholder="First name">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="lastName">Last name</label>
+                                <input type="text" class="form-control editLastNameField" name="lastName" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-6 mb-3">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control editEmailField" name="email" placeholder="Email">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="phone">Phone</label>
+                                <input type="tel" class="form-control editPhoneField" name="phone" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-6 mb-3">
+                                <label for="company">Company</label>
+                                <input type="text" class="form-control editCompanyField" name="company" placeholder="Company">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control editCountryField" name="country" placeholder="Country">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="p-4 text-center border-top">
+                    <button class="btn mx-2 cardbtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom"></i>Save</button>
+                    <button class="btn mx-2 cardbtn cancelEditBtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom"></i>Cancel</button>
                 </div>
             </div>
         </div>
@@ -54,7 +99,7 @@
 
     <!-- Card for displaying a single contact on tablet and PC -->
     <div class="card shadow-lg d-none d-sm-none d-md-block" id="contactCard">
-        <div class="card-body p-0">
+        <div class="card-body p-0 modal-card-contact-details">
             <div class="card-title p-4 mb-0">
                 <img src="SVG4.jpg" alt="Contact's picture" class="rounded-circle mr-2 d-inline-block align-text-middle" width="45" height="45">
                 <h4 class="d-inline-block mb-0 contactName">Tom Elleyz</h4>
@@ -81,8 +126,53 @@
                 </table>
             </div>
             <div class="p-4 text-center border-top">
-                <button class="btn mx-2 cardbtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom">edit</i>Edit</button>
-                <button class="btn mx-2 cardbtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom">delete</i>Delete</button>
+                <button class="btn mx-2 cardbtn editBtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom">edit</i>Edit</button>
+                <button class="btn mx-2 cardbtn deleteBtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom">delete</i>Delete</button>
+            </div>
+        </div>
+
+        <!-- Edit Contact form (initially hidden) -->
+        <div class="card-body modal-content editContactForm p-0">
+            <div class="card-title modal-header p-4 mb-0">
+                <h4 class="d-inline-block mb-0 editTitle">Edit</h4>
+            </div>
+            <div class="px-4 py-2">
+                <form>
+                    <div class="form-row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control editFirstNameField" name="firstName" placeholder="First name">
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="lastName">Last name</label>
+                            <input type="text" class="form-control editLastNameField" name="lastName" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control editEmailField" name="email" placeholder="Email">
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="phone">Phone</label>
+                            <input type="tel" class="form-control editPhoneField" name="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control editCompanyField" name="company" placeholder="Company">
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control editCountryField" name="country" placeholder="Country">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="p-4 text-center border-top">
+                <button class="btn mx-2 cardbtn" type="button" style="color: #009900;"><i class="material-icons align-text-bottom"></i>Save</button>
+                <button class="btn mx-2 cardbtn cancelEditBtn" type="button" style="color: #e60000;"><i class="material-icons align-text-bottom"></i>Cancel</button>
             </div>
         </div>
     </div>
@@ -103,7 +193,7 @@
     </div>
 
     <!-- Topbar -->
-    <div class="container-fluid fixed-top">
+    <div class="container-fluid fixed-top pr-2">
         <div class="row topbar px-3 py-4 mb-0">
             <div class="col-12 col-sm-12 col-md-5 mb-1 mb-sm-1 mb-md-0 text-center">
                 <h3>Executive Contacts</h3>
@@ -124,8 +214,8 @@
                 <div>
                     <h4 class="pl-3 py-4 mb-0" style="background-color: #f5f5f5;">
                         <i class="material-icons align-text-middle mr-1">contacts</i> <span class="sidenavText">Contacts</span> 
-                        <i class="material-icons float-right px-1" id="contractBtn" style="color: #e60000; cursor: pointer;" title="Contract sidebar">chevron_left</i>
-                        <i class="material-icons float-right px-1" id="expandBtn" style="color: #e60000; cursor: pointer;" title="Expand sidebar">chevron_right</i>
+                        <i class="material-icons float-right font-weight-bold px-1" id="contractBtn" style="color: #e60000; cursor: pointer;" title="Contract sidebar">chevron_left</i>
+                        <i class="material-icons float-right font-weight-bold px-1" id="expandBtn" style="color: #e60000; cursor: pointer;" title="Expand sidebar">chevron_right</i>
                     </h4>
                     <div class="list-group list-group-flush">
                         <a href="#!" class="list-group-item list-group-item-action text-body pr-0 current-page-nav"><i class="material-icons mr-1 align-text-bottom" style="font-size: 20px;">visibility</i><span class="sidenavText">View Contacts</span></a>
